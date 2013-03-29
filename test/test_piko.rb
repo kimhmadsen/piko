@@ -65,7 +65,7 @@ class TestPiko < MiniTest::Unit::TestCase
   end
 
   def test_parse_dat_file
-    pd = LogDaten.read("test/data/LogDaten2.dat")
+    pd = LogDaten.read("test/data/LogDaten.dat")
    # pp pd
     refute_nil pd
   end

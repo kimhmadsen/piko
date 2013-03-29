@@ -6,4 +6,3 @@ gemspec
 gem "rake"
 gem "httpclient"
 gem "nokogiri"
-gem "cosm-rb"
