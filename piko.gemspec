@@ -6,10 +6,10 @@ require 'piko/version'
 Gem::Specification.new do |gem|
   gem.name          = "piko"
   gem.version       = Piko::VERSION
-  gem.authors       = ["TODO: Write your name"]
-  gem.email         = ["TODO: Write your email address"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.authors       = ["Kim H Madsen"]
+  gem.email         = ["kim@undo.dk"]
+  gem.description   = "This a lib for working with PIKO Inverter from kostal-solar-electric.com" #%q{TODO: Write a gem description}
+  gem.summary       = "This a lib for working with PIKO Inverter from kostal-solar-electric.com"
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
@@ -17,3 +17,4 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 end
+

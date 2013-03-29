@@ -1,6 +1,7 @@
 # Piko
 
-TODO: Write a gem description
+This gem is for working with a PIKO Inverter from [KOSTAL](http://www.kostal-solar-electric.com/)
+
 
 ## Installation
 
@@ -18,7 +19,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+For it has only been used for receiving current data, and prep them for puplication on cosm.com
+See examples/piko_to_json.rb. The actual upload to cosm.com has been done with curl.
 
 ## Contributing
 
