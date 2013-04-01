@@ -3,9 +3,9 @@ require "httpclient"
 require "csv"
 require "nokogiri"
 require "piko/version"
+require "piko/log_daten.rb"
 
 module Piko
-
 
   class PikoClient
     attr_reader :host, :user, :password
@@ -35,7 +35,7 @@ module Piko
       html_doc.xpath("//table/tr/td").each { |e|
         if e.text.include? "current" 
           #p e
-          return e.next.next.text.strip 
+          return e.next.next.text.strip.to_i
         end
         }
     end
@@ -45,7 +45,7 @@ module Piko
       html_doc.xpath("//table/tr/td").each { |e|
         if e.text.include? "daily energy" 
           #p e
-          return e.next.next.text.strip 
+          return e.next.next.text.strip.to_f 
         end
         }
     end
@@ -55,7 +55,7 @@ module Piko
       html_doc.xpath("//table/tr/td").each { |e|
         if e.text.include? "total energy" 
           #p e
-          return e.next.next.text.strip 
+          return e.next.next.text.strip.to_i
         end
         }
     end
@@ -77,15 +77,5 @@ module Piko
 }"
   end
 
-  class LogDaten
-    def self.parse(str)
-      p CSV.parse(str)
-    end
-    
-    def self.read(file)
-      CSV.read(file)
-    end
-    
-  end
 
 end
