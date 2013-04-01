@@ -64,10 +64,20 @@ class TestPiko < MiniTest::Unit::TestCase
     refute_nil json
   end
 
-  def test_parse_dat_file
+  def test_read_log_daten_file
     pd = LogDaten.read("test/data/LogDaten.dat")
-   # pp pd
+    pp pd.csv.headers
     refute_nil pd
+
+  end
+
+  def test_parse_log_daten
+    data = ""
+    File.open("test/data/LogDaten.dat", "r" ) { |file| data = file.read }
+    
+    pd = LogDaten.parse( data )
+    refute_nil pd
+    pp pd.csv.headers
   end
 end
 
